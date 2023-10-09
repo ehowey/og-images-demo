@@ -1,34 +1,35 @@
 /** @jsxImportSource https://esm.sh/react */
-import React from "https://esm.sh/react@18.2.0";
-import { ImageResponse } from "https://deno.land/x/og_edge/mod.ts";
+import React from 'https://esm.sh/react@18.2.0'
+import { ImageResponse } from 'https://deno.land/x/og_edge/mod.ts'
 
 export default async function handler(req: Request) {
-  const { searchParams } = new URL(req.url);
-  const title = searchParams.get("title");
+  const { searchParams } = new URL(req.url)
+  const title = searchParams.get('title')
   return new ImageResponse(
     (
       <div
         style={{
-          width: "100%",
-          height: "100%",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
+          width: '100%',
+          height: '100%',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
           fontSize: 64,
-          background: "lavender",
-          border: "20px solid indigo",
+          background: 'lavender',
+          border: '20px solid indigo',
+          padding: '0 200px',
         }}
       >
         <div
           style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            width: "72px",
-            height: "72px",
-            backgroundColor: "indigo",
-            borderRadius: "9999em",
-            marginRight: "24px",
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            width: '72px',
+            height: '72px',
+            backgroundColor: 'indigo',
+            borderRadius: '9999em',
+            marginRight: '24px',
           }}
         >
           <svg
@@ -49,6 +50,6 @@ export default async function handler(req: Request) {
         </div>
         {title}
       </div>
-    )
-  );
+    ),
+  )
 }
